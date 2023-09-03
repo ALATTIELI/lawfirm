@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #333;
+  color: white;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 50px;
+}
+
+nav li:last-child {
+  margin-right: 50px; /* Remove margin for the last item to avoid extra spacing */
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;  /* Added padding for larger clickable area and better appearance */
+  border-radius: 5px;  /* Optional: Adds rounded corners */
+  transition: background-color 0.3s;  /* Optional: Smooth transition effect */
+}
+
+nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);  /* Slight highlight on hover */
+}
+
+nav li a:visited {
+  color: white;
+}
+
+nav h1 {
+  flex: 0 0 auto;
+  margin-right: 1em;
+}
+
+header, section, footer {
+  padding: 2em;
+  text-align: center;
+}
+
+footer {
+  background-color: #f4f4f4;
+}
+
+header#home {
+  padding-top: 100px; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-info, .callback-form {
+  margin: 1em 0;
+  padding: 1em;
+}
+/* ... (rest of the CSS remains unchanged) ... */
+
+.callback-form {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 2em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 550px;  /* Adjust this if the form needs to be wider or narrower */
+  margin: 2em auto; /* This centers the form horizontally */
+}
+
+.callback-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.callback-form h3 {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.callback-form .input-group {
+  margin-bottom: 1.5em;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold; /* Makes the label text bold */
+}
+
+.callback-form input, .callback-form textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.callback-form button {
+  padding: 0.8em 1.5em;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1em;  /* Adds some space above the button */
+  transition: background-color 0.3s;
+}
+
+.callback-form button:hover {
+  background-color: #555;
+}
