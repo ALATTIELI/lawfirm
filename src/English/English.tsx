@@ -22,7 +22,7 @@ function Navbar({ toggleLanguage }) {
     <nav>
       <div className="logo">
         <img src="./src/assets/logo.png" alt="Law Firm Logo" />
-        <h3>Abdulrahman Abdullah AlHarbi Law and Legal Consultations</h3>
+        <h2>Abdulrahman Abdullah AlHarbi Law and Legal Consultations</h2>
       </div>
       <ul>
         <li>

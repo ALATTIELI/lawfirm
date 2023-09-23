@@ -25,7 +25,7 @@ function Navbar({ toggleLanguage }) {
     <nav>
       <div className="logo">
         <img src="./src/assets/logo.png" alt="Law Firm Logo" />
-        <h1> عبدالرحمن عبدالله الحربي للمحاماة والاستشارات القانونية </h1>
+        <h2> عبدالرحمن عبدالله الحربي للمحاماة والاستشارات القانونية </h2>
       </div>
       <ul>
         <li>
