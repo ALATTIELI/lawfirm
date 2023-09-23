@@ -1,15 +1,21 @@
 import React from "react";
 import "../App.css";
+import "./Arabic.css";
+import WhatsAppLink from "../WhatsApp/WhatsApp";
+import ImageSlider from "../ImageSlider";
 
 function ArabicApp({ toggleLanguage }) {
   return (
-    <div className="App">
+    <div className="App rtl">
+      {" "}
+      {/* Add the 'rtl' class for RTL layout */}
       <Navbar toggleLanguage={toggleLanguage} />
       <Header />
       <About />
       <Services />
       <Contact />
       <Footer />
+      <WhatsAppLink />
     </div>
   );
 }
@@ -17,7 +23,7 @@ function ArabicApp({ toggleLanguage }) {
 function Navbar({ toggleLanguage }) {
   return (
     <nav>
-        <div className="logo">
+      <div className="logo">
         <img src="./src/assets/logo.png" alt="Law Firm Logo" />
         <h1> عبدالرحمن عبدالله الحربي للمحاماة والاستشارات القانونية </h1>
       </div>
@@ -35,16 +41,10 @@ function Navbar({ toggleLanguage }) {
           <a href="#contactus">اتصل بنا</a>
         </li>
         <li>
-          <button onClick={toggleLanguage}>English</button>
+          <button onClick={toggleLanguage} className="language-button">
+            English
+          </button>
         </li>
-        <a
-          href={`https://wa.me/${+97126330061}`}
-          className="whatsapp-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-             Contact via WhatsApp
-        </a>
       </ul>
     </nav>
   );
@@ -53,11 +53,13 @@ function Navbar({ toggleLanguage }) {
 function Header() {
   return (
     <header id="home">
-      <h2>شعارنا</h2>
+      <ImageSlider />
+      <div className="divider"></div>
+      <h1>شعارنا</h1>
       <p>اتقان العمل </p>
       <p> امانة الأداء</p>
       <p>دقة المتابعة</p>
-      <h2>هدفنا</h2>
+      <h1>هدفنا</h1>
       <p>حماية حقوق موكلينا </p>
     </header>
   );
@@ -66,7 +68,7 @@ function Header() {
 function About() {
   return (
     <section id="about">
-      <h2>من نحن</h2>
+      <h1>من نحن</h1>
       <p>مكتبنا يخدم المجتمع لأكثر من 20 عامًا...</p>
     </section>
   );
@@ -76,7 +78,7 @@ function Services() {
   return (
     <section id="services">
       <div className="common-container">
-        <h2>خدماتنا</h2>
+        <h1>خدماتنا</h1>
         <ul>
           <p>
             ١. القضايا المدنية بكافة أنواعها بما تشمله من تقديم المساعدة
@@ -122,11 +124,8 @@ function Services() {
 function Contact() {
   return (
     <section id="contactus">
-      <h2>اتصل بنا</h2>
-
-      {/* معلومات الاتصال */}
       <div className="contact-info">
-        <h3>معلومات الاتصال</h3>
+        <h1>معلومات الاتصال</h1>
         <p>البريد الإلكتروني: contact@lawfirm.com</p>
         <p>الهاتف: +1-123-456-7890</p>
         <p>العنوان: 123 شارع المكتب القانوني، المدينة، البلد</p>

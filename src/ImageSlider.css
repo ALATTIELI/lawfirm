@@ -1,0 +1,47 @@
+/* ImageSlider.css */
+
+.imageslider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+
+.slider-image {
+  width: 600px; /* Set a fixed width for the images */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+/* Divider style */
+.divider {
+  border-top: 1px solid #ccc; /* Adjust the border style as needed */
+  margin-top: 20px; /* Adjust the margin as needed to control the spacing */
+}

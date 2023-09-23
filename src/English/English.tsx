@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
-import WhatsApp from "../WhatsApp";
-import WhatsAppLink from "../WhatsApp";
+import WhatsAppLink from "../WhatsApp/WhatsApp";
+import ImageSlider from "../ImageSlider";
 
 function EnglishApp({ toggleLanguage }) {
   return (
@@ -48,10 +48,8 @@ function Navbar({ toggleLanguage }) {
 function Header() {
   return (
     <header id="home">
-      {/* <div className="common-container"> */}
-      {/* <div className="welcomeimage">
-        <img src="./src/assets/court.jpg" alt="Law Firm Logo" />
-      </div> */}
+      <ImageSlider />
+      <div className="divider"></div>
       <h1>Welcome to Our Law Firm</h1>
       <p>We provide the best legal services in town.</p>
       {/* </div> */}
@@ -74,7 +72,7 @@ function Services() {
   return (
     <section id="services">
       <div className="common-container">
-        <h2>Our Services</h2>
+        <h1>Our Services</h1>
         <ul>
           <p>
             1. Civil cases of all types, including providing legal assistance to
@@ -124,11 +122,9 @@ function Services() {
 function Contact() {
   return (
     <section id="contactus">
-      {/* <div className="common-container"> */}
-      <h2>Contact Us</h2>
       {/* Contact Information */}
       <div className="contact-info">
-        <h3>Contact Information</h3>
+        <h1>Contact Information</h1>
         <p>Email: contact@lawfirm.com</p>
         <p>Phone: +1-123-456-7890</p>
         <p>Address: 123 Law Firm St., City, Country</p>

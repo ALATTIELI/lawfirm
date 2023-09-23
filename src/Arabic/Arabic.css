@@ -1,0 +1,13 @@
+.rtl {
+  direction: rtl;
+}
+
+nav li a {
+  padding: 10px;
+}
+
+.language-button {
+  margin-left: 70px;
+}
+
+
