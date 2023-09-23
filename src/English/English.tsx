@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import WhatsApp from "../WhatsApp";
+import WhatsAppLink from "../WhatsApp";
 
 function EnglishApp({ toggleLanguage }) {
   return (
@@ -10,6 +12,7 @@ function EnglishApp({ toggleLanguage }) {
       <Services />
       <Contact />
       <Footer />
+      <WhatsAppLink />
     </div>
   );
 }
@@ -17,15 +20,11 @@ function EnglishApp({ toggleLanguage }) {
 function Navbar({ toggleLanguage }) {
   return (
     <nav>
-        
       <div className="logo">
         <img src="./src/assets/logo.png" alt="Law Firm Logo" />
         <h3>Abdulrahman Abdullah AlHarbi Law and Legal Consultations</h3>
       </div>
       <ul>
-      <li>
-          <button onClick={toggleLanguage}>العربية</button>
-        </li>
         <li>
           <a href="#home">Home</a>
         </li>
@@ -38,7 +37,9 @@ function Navbar({ toggleLanguage }) {
         <li>
           <a href="#contactus">Contact Us</a>
         </li>
-       
+        <li>
+          <button onClick={toggleLanguage}>العربية</button>
+        </li>
       </ul>
     </nav>
   );
@@ -51,8 +52,8 @@ function Header() {
       {/* <div className="welcomeimage">
         <img src="./src/assets/court.jpg" alt="Law Firm Logo" />
       </div> */}
-        <h1>Welcome to Our Law Firm</h1>
-        <p>We provide the best legal services in town.</p>
+      <h1>Welcome to Our Law Firm</h1>
+      <p>We provide the best legal services in town.</p>
       {/* </div> */}
     </header>
   );
@@ -62,8 +63,8 @@ function About() {
   return (
     <section id="about">
       {/* <div className="common-container"> */}
-        <h1>About Us</h1>
-        <p>Our firm has been serving the community for over 20 years...</p>
+      <h1>About Us</h1>
+      <p>Our firm has been serving the community for over 20 years...</p>
       {/* </div> */}
     </section>
   );
@@ -81,9 +82,9 @@ function Services() {
             clients.
           </p>
           <p>
-            2. Commercial cases of all types, including disputes involving banking
-            transactions, contract disputes, and financial claims arising from
-            the supply of goods, works, and services.
+            2. Commercial cases of all types, including disputes involving
+            banking transactions, contract disputes, and financial claims
+            arising from the supply of goods, works, and services.
           </p>
           <p>
             3. Criminal cases, including criminal pleadings before various court
@@ -93,9 +94,9 @@ function Services() {
           <p>4. Representation of our clients in personal status cases.</p>
           <p>5. Company establishment procedures.</p>
           <p>
-            6. Notarizing company contracts and amendments, and their annexes, in
-            accordance with the notarization jurisdiction issued by the Economic
-            Development Department in Abu Dhabi.
+            6. Notarizing company contracts and amendments, and their annexes,
+            in accordance with the notarization jurisdiction issued by the
+            Economic Development Department in Abu Dhabi.
           </p>
           <p>7. Representation of office clients in arbitration cases.</p>
           <p>8. Execution of judgments and debt collection.</p>
@@ -106,12 +107,12 @@ function Services() {
             to prepare for court conditions if litigation becomes necessary.
           </p>
           <p>
-            10. Labor disputes, including providing legal consultations to employers
-            and employees in accordance with labor law.
+            10. Labor disputes, including providing legal consultations to
+            employers and employees in accordance with labor law.
           </p>
           <p>
-            11. Handling cases outside the country in partnership and coordination
-            with regional law firms.
+            11. Handling cases outside the country in partnership and
+            coordination with regional law firms.
           </p>
           <p>12. Insurance disputes related to accidents and insured risks.</p>
         </ul>
@@ -124,14 +125,14 @@ function Contact() {
   return (
     <section id="contactus">
       {/* <div className="common-container"> */}
-        <h2>Contact Us</h2>
-        {/* Contact Information */}
-        <div className="contact-info">
-          <h3>Contact Information</h3>
-          <p>Email: contact@lawfirm.com</p>
-          <p>Phone: +1-123-456-7890</p>
-          <p>Address: 123 Law Firm St., City, Country</p>
-        </div>
+      <h2>Contact Us</h2>
+      {/* Contact Information */}
+      <div className="contact-info">
+        <h3>Contact Information</h3>
+        <p>Email: contact@lawfirm.com</p>
+        <p>Phone: +1-123-456-7890</p>
+        <p>Address: 123 Law Firm St., City, Country</p>
+      </div>
       {/* </div> */}
     </section>
   );

@@ -165,3 +165,13 @@ html {
   width: 500px; /* Adjust the width as needed */
   margin-right: 20px; /* Add spacing between the logo and text */
 } 
+
+.whatsapp-link {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+  color: #25D366;
+  padding: 10px 20px;
+  text-decoration: none;
+  z-index: 1000; /* Ensure it's above other elements */
+}
