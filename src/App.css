@@ -29,7 +29,11 @@ nav ul {
 
 h1{
   color: #818385;
-  text-shadow: 2px 2px 8px #a1782c ;
+  /* text-shadow: 2px 2px 8px #a1782c ; */
+}
+
+p {
+  font-size:  20px;
 }
 
 nav li:last-child {
@@ -86,7 +90,8 @@ html {
 }
 
 .logo img {
-  width: 90px; /* Adjust the width as needed */
+  height: 80px;
+  width: 300px; /* Adjust the width as needed */
   margin-right: 20px; /* Add spacing between the logo and text */
 } 
 
