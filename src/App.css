@@ -4,7 +4,6 @@ body {
   padding: 0;
 }
 
-
 nav {
   position: fixed;
   top: 0;
@@ -17,7 +16,6 @@ nav {
   color: #818385;
   align-items: center;
   box-shadow: 5px 5px 20px #a1782c; /* Optional: Add a box shadow for a card-like appearance */
-
 }
 
 nav ul {
@@ -27,13 +25,14 @@ nav ul {
   align-items: center;
 }
 
-h1{
+h1 {
   color: #818385;
   /* text-shadow: 2px 2px 8px #a1782c ; */
 }
 
 p {
-  font-size:  20px;
+  font-size: 20px;
+  /* text-justify: inter-word; */
 }
 
 nav li:last-child {
@@ -43,13 +42,13 @@ nav li:last-child {
 nav li a {
   color: #818385;
   text-decoration: none;
-  padding: 10px 20px;  /* Added padding for larger clickable area and better appearance */
-  border-radius: 5px;  /* Optional: Adds rounded corners */
-  transition: background-color 0.3s;  /* Optional: Smooth transition effect */
+  padding: 10px 20px; /* Added padding for larger clickable area and better appearance */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+  transition: background-color 0.3s; /* Optional: Smooth transition effect */
 }
 
 nav li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);  /* Slight highlight on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Slight highlight on hover */
 }
 
 nav li a:visited {
@@ -62,9 +61,21 @@ nav h3 {
   color: #818385;
 }
 
-header, section, footer {
+/* Justify the text content */
+p,
+h1,
+h2,
+h3,
+li {
+  text-justify: inter-word;
+}
+
+/* Center the blocks or containers */
+header,
+section,
+footer {
   padding: 2em;
-  text-align: center;
+  text-align: center; /* For inline elements inside these containers */
 }
 
 footer {
@@ -73,16 +84,15 @@ footer {
 }
 
 header#home {
-  padding-top: 100px; 
+  padding-top: 100px;
 }
 
-header h1{
+header h1 {
   color: #818385;
 }
 html {
   scroll-behavior: smooth;
 }
-
 
 .logo {
   display: flex;
@@ -93,7 +103,7 @@ html {
   height: 80px;
   width: 300px; /* Adjust the width as needed */
   margin-right: 20px; /* Add spacing between the logo and text */
-} 
+}
 
 .common-container {
   font-size: large;
@@ -102,8 +112,9 @@ html {
   padding: 20px; /* Add padding for spacing */
   border: 1px solid #ccc; /* Optional: Add a border for visual separation */
   box-shadow: 5px 5px 20px #a1782c; /* Optional: Add a box shadow for a card-like appearance */
+  width: 80%; /* or max-width: 800px; or any desired width */
+  margin: 0 auto; /* This centers the block on the page */
 }
-
 
 .welcomeimage {
   /* display: flex; */
@@ -114,15 +125,24 @@ html {
   height: 250px;
   width: 500px; /* Adjust the width as needed */
   margin-right: 20px; /* Add spacing between the logo and text */
-} 
+}
 
 .whatsapp-link {
   position: fixed;
   bottom: 20px; /* Adjust the distance from the bottom as needed */
   right: 20px; /* Adjust the distance from the right as needed */
-  color: #25D366;
+  color: #25d366;
   padding: 10px 20px;
   text-decoration: none;
   z-index: 1000; /* Ensure it's above other elements */
 }
+
+.abdulrahman {
+  height: 500px;
+  width: 450px;
+  border: 5px solid #818385; /* Optional: Add a border for visual separation */
+  margin-top: 50px;
+  box-shadow: 5px 5px 20px #a1782c; /* Optional: Add a box shadow for a card-like appearance */
+}
+
 

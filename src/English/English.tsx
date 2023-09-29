@@ -51,8 +51,9 @@ function Header() {
       <ImageSlider />
       <div className="divider"></div>
       <h1>
-        Welcome to Abdul Rahman Abdullah Al-Harbi's Office for Legal Advocacy
-        and Consultations
+        Welcome to: <br />
+        Abdul Rahman Abdullah Al-Harbi's Office
+        <br /> for Legal Advocacy and Consultations
       </h1>{" "}
       <p>
         On behalf of myself and our team at the office:
@@ -62,19 +63,19 @@ function Header() {
         I affirm our vow that we made to ourselves when we had the honor of
         working in law,
         <br />
-        a vow emanating from the charter of our conscience in all our dealings.
-        <br />
-        This is the vow we present to every client of our office:
-        <br />
-        "Our supreme goal in practicing law is to protect the rights of our
-        clients,
-        <br />
-        and the means to achieve that are: mastery of work, integrity in
-        performance, precision in follow-up,
-        <br />
-        and exerting maximum effort and care."
+        a vow emanating from the charter of our conscience in all our dealings.{" "}
+        <br /> This is the vow we present to every client of our office: "Our
+        supreme goal in <br />
+        practicing law is to protect the rights of our clients, and the means to
+        achieve that are: <br />
+        mastery of work, integrity in performance, precision in follow-up, and
+        exerting maximum effort and care."{" "}
+        <img
+          className="abdulrahman"
+          src="./src/assets/abdulrahman.jpeg"
+          alt="abdulrahman"
+        />
       </p>{" "}
-      {/* </div> */}
     </header>
   );
 }
