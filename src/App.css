@@ -177,3 +177,52 @@ html {
   margin-top: 50px;
   box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
 } 
+
+#journey {
+  padding: 2em 0;
+  background-color: #f7f7f7;
+  text-align: center;
+  overflow: hidden;  /* Ensure floats are contained within the section */
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-y: hidden;
+  height: 200px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #b2925f;
+  z-index: 0;  /* Place line below milestones */
+}
+
+.milestone {
+  position: relative;
+  height: 200px;
+  z-index: 1;  /* Ensure milestones appear above line */
+  margin: 0 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.milestone h2 {
+  color: #b2925f;
+}
+
+.milestone p {
+  margin: 0.5em 0 0;
+  color: #555;
+}
+
+

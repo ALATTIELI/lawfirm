@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../App.css";
 import WhatsAppLink from "../WhatsApp/WhatsApp";
 import ImageSlider from "../ImageSlider";
@@ -52,9 +52,9 @@ function Header() {
       <div className="divider"></div>
       <div className="header-container">
         <img
-            className="abdulrahman"
-            src="./src/assets/abdulrahman.jpeg"
-            alt="abdulrahman"
+          className="abdulrahman"
+          src="./src/assets/abdulrahman.jpeg"
+          alt="abdulrahman"
         />
         <div className="header-text">
           <h1 className="welcomeee">
@@ -65,16 +65,19 @@ function Header() {
           <p>
             On behalf of myself and our team at the office:
             <br />
-            "Abdul Rahman Abdullah Al-Harbi for Legal Consultation and Advocacy,"
+            "Abdul Rahman Abdullah Al-Harbi for Legal Consultation and
+            Advocacy,"
             <br />
             I affirm our vow that we made to ourselves when we had the honor of
             working in law,
             <br />
-            a vow emanating from the charter of our conscience in all our dealings.
-            <br /> This is the vow we present to every client of our office: "Our
-            supreme goal in practicing law is to protect the rights of our clients, and the means to
-            achieve that are: mastery of work, integrity in performance, precision in follow-up, and
-            exerting maximum effort and care.
+            a vow emanating from the charter of our conscience in all our
+            dealings.
+            <br /> This is the vow we present to every client of our office:
+            "Our supreme goal in practicing law is to protect the rights of our
+            clients, and the means to achieve that are: mastery of work,
+            integrity in performance, precision in follow-up, and exerting
+            maximum effort and care.
           </p>
         </div>
       </div>
@@ -83,12 +86,79 @@ function Header() {
 }
 
 function About() {
+  const timelineRef = useRef<HTMLDivElement | null>(null);
+  const MILESTONE_HEIGHT = 200; // Adjust based on your CSS
+
+  useEffect(() => {
+    let isPaused = false;
+
+    const autoScroll = () => {
+      if (!isPaused && timelineRef.current) {
+        const maxScroll =
+          timelineRef.current.scrollHeight - timelineRef.current.clientHeight;
+        console.log("Max Scroll:", maxScroll);
+        console.log("Current Scroll:", timelineRef.current.scrollTop);
+        if (timelineRef.current.scrollTop < maxScroll - MILESTONE_HEIGHT) {
+          timelineRef.current.scrollTop += MILESTONE_HEIGHT;
+          console.log("Scrolling...");
+        } else {
+          // Reset to the start when reaching the end
+          timelineRef.current.scrollTop = 0;
+          console.log("Resetting...");
+        }
+      }
+    };
+
+    const handleMouseOver = () => (isPaused = true);
+    const handleMouseOut = () => (isPaused = false);
+
+    timelineRef.current?.addEventListener("mouseover", handleMouseOver);
+    timelineRef.current?.addEventListener("mouseout", handleMouseOut);
+
+    // Start the auto-scroll
+    const intervalId = setInterval(autoScroll, 1000); // Scroll every 5 seconds
+
+    // Clean up the interval and event listeners on component unmount
+    return () => {
+      clearInterval(intervalId);
+      timelineRef.current?.removeEventListener("mouseover", handleMouseOver);
+      timelineRef.current?.removeEventListener("mouseout", handleMouseOut);
+    };
+  }, []);
+
   return (
-    <section id="about">
-      {/* <div className="common-container"> */}
-      <h1>About Us</h1>
-      <p>Our firm has been serving the community for over 20 years...</p>
-      {/* </div> */}
+    <section id="journey">
+      <h1>Professional Journey</h1>
+      <div className="timeline" ref={timelineRef}>
+        <div className="milestone">
+          <h2>1990</h2>
+          <p>Started Law School at XYZ University.</p>
+        </div>
+        <div className="milestone">
+          <h2>1995</h2>
+          <p>Joined ABC Law Firm as a Junior Advocate.</p>
+        </div>
+        <div className="milestone">
+          <h2>2005</h2>
+          <p>Founded my own Law Firm.</p>
+        </div>
+        <div className="milestone">
+          <h2>2005</h2>
+          <p>Founded my ownb  iqvfphbpiqv ubcw fvivcpib Law Firm.</p>
+        </div>
+        <div className="milestone">
+          <h2>2005</h2>
+          <p>Founded my own Law Firm.</p>
+        </div>
+        <div className="milestone">
+          <h2>2005</h2>
+          <p>Founded my own Law Firm.</p>
+        </div>
+        <div className="milestone">
+          <h2>2005</h2>
+          <p>Founded my own Law Firm.</p>
+        </div>
+      </div>
     </section>
   );
 }
