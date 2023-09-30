@@ -69,13 +69,14 @@ function Header() {
         practicing law is to protect the rights of our clients, and the means to
         achieve that are: <br />
         mastery of work, integrity in performance, precision in follow-up, and
-        exerting maximum effort and care."{" "}
+        exerting maximum effort and care. <br />
         <img
           className="abdulrahman"
           src="./src/assets/abdulrahman.jpeg"
           alt="abdulrahman"
         />
-      </p>{" "}
+       
+      </p>
     </header>
   );
 }
