@@ -21,7 +21,7 @@ function Navbar({ toggleLanguage }) {
   return (
     <nav>
       <div className="logo">
-        <img src="./src/assets/navlogo.jpeg" alt="Law Firm Logo" />
+        <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
         {/* <h2>Abdulrahman Abdullah AlHarbi Law and Legal Consultations</h2> */}
       </div>
       <ul>
@@ -161,7 +161,7 @@ function Contact() {
 function Footer() {
   return (
     <footer>
-      <p>© 2023 Law Firm Name. All rights reserved.</p>
+      <p className="foot">© 2023 Law Firm Name. All rights reserved.</p>
     </footer>
   );
 }

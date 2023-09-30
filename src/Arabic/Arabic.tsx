@@ -24,7 +24,7 @@ function Navbar({ toggleLanguage }) {
   return (
     <nav>
       <div className="logo">
-        <img src="./src/assets/navlogo.jpeg" alt="Law Firm Logo" />
+        <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
         {/* <h2> عبدالرحمن عبدالله الحربي للمحاماة والاستشارات القانونية </h2> */}
       </div>
       <ul>

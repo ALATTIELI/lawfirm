@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #3a2e22;
 }
 
 nav {
@@ -12,10 +13,10 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1em 2em;
-  background-color: white;
-  color: #818385;
+  background-color: #b2925f;
+  color: #b2925f;
   align-items: center;
-  box-shadow: 5px 5px 20px #a1782c; /* Optional: Add a box shadow for a card-like appearance */
+  box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
 }
 
 nav ul {
@@ -26,7 +27,7 @@ nav ul {
 }
 
 h1 {
-  color: #818385;
+  color: #b2925f;
   /* text-shadow: 2px 2px 8px #a1782c ; */
 }
 
@@ -40,7 +41,7 @@ nav li:last-child {
 }
 
 nav li a {
-  color: #818385;
+  color: #b2925f;
   text-decoration: none;
   padding: 10px 20px; /* Added padding for larger clickable area and better appearance */
   border-radius: 5px; /* Optional: Adds rounded corners */
@@ -52,22 +53,22 @@ nav li a:hover {
 }
 
 nav li a:visited {
-  color: #a1782c;
+  color: white;
 }
 
 nav h3 {
   flex: 0 0 auto;
   margin-right: 1em;
-  color: #818385;
+  color: #b2925f;
 }
 
 /* Justify the text content */
 p,
-h1,
 h2,
 h3,
 li {
   text-justify: inter-word;
+  color: white;
 }
 
 /* Center the blocks or containers */
@@ -79,8 +80,12 @@ footer {
 }
 
 footer {
-  background-color: #818385;
+  background-color: #b2925f;
   /* margin-top: 300px; */
+}
+
+.foot{
+  color: white;
 }
 
 header#home {
@@ -88,7 +93,7 @@ header#home {
 }
 
 header h1 {
-  color: #818385;
+  color: #b2925f;
 }
 html {
   scroll-behavior: smooth;
@@ -100,8 +105,8 @@ html {
 }
 
 .logo img {
-  height: 80px;
-  width: 300px; /* Adjust the width as needed */
+  height: 90px;
+  width: 400px; /* Adjust the width as needed */
   margin-right: 20px; /* Add spacing between the logo and text */
 }
 
@@ -111,7 +116,7 @@ html {
   text-align: center; /* Reset text alignment inside the container to left */
   padding: 20px; /* Add padding for spacing */
   border: 1px solid #ccc; /* Optional: Add a border for visual separation */
-  box-shadow: 5px 5px 20px #a1782c; /* Optional: Add a box shadow for a card-like appearance */
+  box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
   width: 80%; /* or max-width: 800px; or any desired width */
   margin: 0 auto; /* This centers the block on the page */
 }
@@ -142,7 +147,7 @@ html {
   width: 450px;
   border: 5px solid #818385; /* Optional: Add a border for visual separation */
   margin-top: 50px;
-  box-shadow: 5px 5px 20px #a1782c; /* Optional: Add a box shadow for a card-like appearance */
+  box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
 }
 
 
