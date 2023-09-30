@@ -143,6 +143,9 @@ html {
   bottom: 20px; /* Adjust the distance from the bottom as needed */
   right: 20px; /* Adjust the distance from the right as needed */
   color: #25d366;
+  background-color: white;
+  border-radius: 40px;
+
   padding: 10px 20px;
   text-decoration: none;
   z-index: 1000; /* Ensure it's above other elements */
