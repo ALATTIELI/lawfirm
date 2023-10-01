@@ -181,51 +181,88 @@ html {
   box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
 } 
 
+/* Section styling */
 #journey {
   padding: 2em 0;
-  background-color: #f7f7f7;
+  background-color: #f7f7f7; /* Light background for better contrast */
   text-align: center;
-  overflow: hidden;  /* Ensure floats are contained within the section */
+  overflow-x: auto; /* Scroll if content exceeds the viewport width */
 }
+
+#journey h1 {
+  margin-bottom: 1em;
+  color: #3a2e22;
+}
+
+/* Horizontal Timeline Styling */
 
 .timeline {
-  display: flex;
-  justify-content: center;
+  display: flex; /* Make it horizontal */
   align-items: center;
-  position: relative;
-  overflow-y: hidden;
-  height: 200px;
+  justify-content: start;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  gap: 2em; /* Spacing between items */
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 4px;
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1em; /* Adjust as necessary for spacing between components */
+}
+
+.timeline-separator {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.timeline-connector {
+  width: 2em; /* Adjust for desired horizontal spacing */
+  height: 2px; /* Line thickness */
   background-color: #b2925f;
-  z-index: 0;  /* Place line below milestones */
 }
 
-.milestone {
-  position: relative;
-  height: 200px;
-  z-index: 1;  /* Ensure milestones appear above line */
-  margin: 0 30px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.timeline-dot {
+  width: 12px; /* Adjust for size */
+  height: 12px;
+  background-color: #b2925f;
+  border-radius: 50%; /* Makes it circular */
 }
 
-.milestone h2 {
-  color: #b2925f;
+.timeline-opposite-content {
+  flex: none; /* Prevents it from growing with the content */
+  white-space: nowrap; /* Prevent wrapping */
+  padding-right: 1em; /* Spacing between the year and the timeline */
+  color: #3a2e22; /* Text color */
 }
 
-.milestone p {
-  margin: 0.5em 0 0;
-  color: #555;
+.timeline-content {
+  padding: 1em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  color: #3a2e22; /* Text color */
 }
+
+.timeline-content h6 {
+  color: #3a2e22;
+  margin-bottom: 0.5em;
+}
+
+/* Text styling for TimelineItem */
+#journey .MuiTypography-root {
+  color: #3a2e22;
+}
+
+/* Styling for dots and line */
+#journey .MuiTimelineDot-root {
+  background-color: #b2925f;
+}
+
+#journey .MuiTimelineConnector-root {
+  background-color: #b2925f;
+}
+
+
 
 

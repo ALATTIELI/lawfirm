@@ -2,6 +2,14 @@ import React, { useEffect, useRef } from "react";
 import "../App.css";
 import WhatsAppLink from "../WhatsApp/WhatsApp";
 import ImageSlider from "../ImageSlider";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import Typography from "@mui/material/Typography";
 
 function EnglishApp({ toggleLanguage }) {
   return (
@@ -86,79 +94,73 @@ function Header() {
 }
 
 function About() {
-  const timelineRef = useRef<HTMLDivElement | null>(null);
-  const MILESTONE_HEIGHT = 200; // Adjust based on your CSS
-
-  useEffect(() => {
-    let isPaused = false;
-
-    const autoScroll = () => {
-      if (!isPaused && timelineRef.current) {
-        const maxScroll =
-          timelineRef.current.scrollHeight - timelineRef.current.clientHeight;
-        console.log("Max Scroll:", maxScroll);
-        console.log("Current Scroll:", timelineRef.current.scrollTop);
-        if (timelineRef.current.scrollTop < maxScroll - MILESTONE_HEIGHT) {
-          timelineRef.current.scrollTop += MILESTONE_HEIGHT;
-          console.log("Scrolling...");
-        } else {
-          // Reset to the start when reaching the end
-          timelineRef.current.scrollTop = 0;
-          console.log("Resetting...");
-        }
-      }
-    };
-
-    const handleMouseOver = () => (isPaused = true);
-    const handleMouseOut = () => (isPaused = false);
-
-    timelineRef.current?.addEventListener("mouseover", handleMouseOver);
-    timelineRef.current?.addEventListener("mouseout", handleMouseOut);
-
-    // Start the auto-scroll
-    const intervalId = setInterval(autoScroll, 1000); // Scroll every 5 seconds
-
-    // Clean up the interval and event listeners on component unmount
-    return () => {
-      clearInterval(intervalId);
-      timelineRef.current?.removeEventListener("mouseover", handleMouseOver);
-      timelineRef.current?.removeEventListener("mouseout", handleMouseOut);
-    };
-  }, []);
-
   return (
     <section id="journey">
       <h1>Professional Journey</h1>
-      <div className="timeline" ref={timelineRef}>
-        <div className="milestone">
-          <h2>1990</h2>
-          <p>Started Law School at XYZ University.</p>
-        </div>
-        <div className="milestone">
-          <h2>1995</h2>
-          <p>Joined ABC Law Firm as a Junior Advocate.</p>
-        </div>
-        <div className="milestone">
-          <h2>2005</h2>
-          <p>Founded my own Law Firm.</p>
-        </div>
-        <div className="milestone">
-          <h2>2005</h2>
-          <p>Founded my ownb  iqvfphbpiqv ubcw fvivcpib Law Firm.</p>
-        </div>
-        <div className="milestone">
-          <h2>2005</h2>
-          <p>Founded my own Law Firm.</p>
-        </div>
-        <div className="milestone">
-          <h2>2005</h2>
-          <p>Founded my own Law Firm.</p>
-        </div>
-        <div className="milestone">
-          <h2>2005</h2>
-          <p>Founded my own Law Firm.</p>
-        </div>
-      </div>
+      <Timeline position="alternate">
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            1990
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Law School
+            </Typography>
+            <Typography>Started Law School at XYZ University.</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            1995
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Junior Advocate
+            </Typography>
+            <Typography>Joined ABC Law Firm as a Junior Advocate.</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            2005
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Founded Law Firm
+            </Typography>
+            <Typography>Founded my own Law Firm.</Typography>
+          </TimelineContent>
+        </TimelineItem>
+      </Timeline>
     </section>
   );
 }

@@ -3,6 +3,8 @@ import "../App.css";
 import "./Arabic.css";
 import WhatsAppLink from "../WhatsApp/WhatsApp";
 import ImageSlider from "../ImageSlider";
+import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from "@mui/lab";
+import { Typography } from "@mui/material";
 
 function ArabicApp({ toggleLanguage }) {
   return (
@@ -90,12 +92,120 @@ function Header() {
 
 function About() {
   return (
-    <section id="about">
-      <h1>من نحن</h1>
-      <p>مكتبنا يخدم المجتمع لأكثر من 20 عامًا...</p>
-    </section>
+      <section id="journey">
+          <h1>Professional Journey</h1>
+          <Timeline position="alternate">
+              <TimelineItem>
+                  <TimelineContent sx={{ py: "12px", px: 2 }}>
+                      <Typography variant="h6" component="span">
+                          Law School
+                      </Typography>
+                      <Typography>Started Law School at XYZ University.</Typography>
+                  </TimelineContent>
+                  <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineOppositeContent
+                      sx={{ m: "auto 0" }}
+                      align="right"
+                      variant="body2"
+                      color="text.secondary"
+                  >
+                      1990
+                  </TimelineOppositeContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                  <TimelineContent sx={{ py: "12px", px: 2 }}>
+                      <Typography variant="h6" component="span">
+                          Junior Advocate
+                      </Typography>
+                      <Typography>Joined ABC Law Firm as a Junior Advocate.</Typography>
+                  </TimelineContent>
+                  <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineOppositeContent
+                      sx={{ m: "auto 0" }}
+                      align="right"
+                      variant="body2"
+                      color="text.secondary"
+                  >
+                      1995
+                  </TimelineOppositeContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                  <TimelineContent sx={{ py: "12px", px: 2 }}>
+                      <Typography variant="h6" component="span">
+                          Founded Law Firm
+                      </Typography>
+                      <Typography>Founded my own Law Firm.</Typography>
+                  </TimelineContent>
+                  <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineOppositeContent
+                      sx={{ m: "auto 0" }}
+                      align="right"
+                      variant="body2"
+                      color="text.secondary"
+                  >
+                      2005
+                  </TimelineOppositeContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                  <TimelineContent sx={{ py: "12px", px: 2 }}>
+                      <Typography variant="h6" component="span">
+                          Senior Advocate
+                      </Typography>
+                      <Typography>Became a Senior Advocate at ABC Law Firm.</Typography>
+                  </TimelineContent>
+                  <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineOppositeContent
+                      sx={{ m: "auto 0" }}
+                      align="right"
+                      variant="body2"
+                      color="text.secondary"
+                  >
+                      2010
+                  </TimelineOppositeContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                  <TimelineContent sx={{ py: "12px", px: 2 }}>
+                      <Typography variant="h6" component="span">
+                          Legal Awards
+                      </Typography>
+                      <Typography>Received legal awards for outstanding performance.</Typography>
+                  </TimelineContent>
+                  <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineOppositeContent
+                      sx={{ m: "auto 0" }}
+                      align="right"
+                      variant="body2"
+                      color="text.secondary"
+                  >
+                      2015
+                  </TimelineOppositeContent>
+              </TimelineItem>
+
+          </Timeline>
+      </section>
   );
 }
+
+
 
 function Services() {
   return (

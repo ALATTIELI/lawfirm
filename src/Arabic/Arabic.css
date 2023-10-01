@@ -15,3 +15,24 @@ nav li a {
   text-align: center;
 }
 
+
+
+.rtl .MuiTimelineItem-root {
+  flex-direction: row-reverse; /* Reverse the direction for RTL */
+}
+
+.rtl .MuiTimelineOppositeContent-root {
+  align-self: flex-start; /* Align date to the start */
+  padding-left: 0; /* Reset the padding */
+  padding-right: 16px; /* Add padding to the right to space out from the dot */
+  text-align: left; /* Align date text to the left */
+}
+
+.rtl .MuiTimelineContent-root {
+  align-self: flex-end; /* Align content to the end */
+  padding-right: 0; /* Reset the padding */
+  padding-left: 16px; /* Add padding to the left to space out from the dot */
+  text-align: right; /* Align content text to the right */
+}
+
+
