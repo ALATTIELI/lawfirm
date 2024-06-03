@@ -3,14 +3,18 @@ import "../App.css";
 import "./Arabic.css";
 import WhatsAppLink from "../WhatsApp/WhatsApp";
 import ImageSlider from "../ImageSlider";
-import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from "@mui/lab";
-import { Typography } from "@mui/material";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import Typography from "@mui/material/Typography";
 
-function ArabicApp({ toggleLanguage }) {
+const ArabicApp = ({ toggleLanguage }) => {
   return (
-    <div className="App rtl">
-      {" "}
-      {/* Add the 'rtl' class for RTL layout */}
+    <div className="App">
       <Navbar toggleLanguage={toggleLanguage} />
       <Header />
       <About />
@@ -20,14 +24,13 @@ function ArabicApp({ toggleLanguage }) {
       <WhatsAppLink />
     </div>
   );
-}
+};
 
-function Navbar({ toggleLanguage }) {
+const Navbar = ({ toggleLanguage }) => {
   return (
     <nav>
       <div className="logo">
         <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
-        {/* <h2> عبدالرحمن عبدالله الحربي للمحاماة والاستشارات القانونية </h2> */}
       </div>
       <ul>
         <li>
@@ -50,9 +53,9 @@ function Navbar({ toggleLanguage }) {
       </ul>
     </nav>
   );
-}
+};
 
-function Header() {
+const Header = () => {
   return (
     <header id="home">
       <ImageSlider />
@@ -88,191 +91,216 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
-function About() {
+const About = () => {
   return (
-      <section id="journey">
-          <h1>Professional Journey</h1>
-          <Timeline position="alternate">
-              <TimelineItem>
-                  <TimelineContent sx={{ py: "12px", px: 2 }}>
-                      <Typography variant="h6" component="span">
-                          Law School
-                      </Typography>
-                      <Typography>Started Law School at XYZ University.</Typography>
-                  </TimelineContent>
-                  <TimelineSeparator>
-                      <TimelineDot />
-                      <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineOppositeContent
-                      sx={{ m: "auto 0" }}
-                      align="right"
-                      variant="body2"
-                      color="text.secondary"
-                  >
-                      1990
-                  </TimelineOppositeContent>
-              </TimelineItem>
+    <section id="journey">
+      <h1>المسيرة المهنية</h1>
+      <Timeline position="alternate">
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            1994
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className="rtl" sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              بدأ مسيرته المهنية
+            </Typography>
+            <Typography>
+              بدأ مسيرته المهنية والتحق بالعمل لدى عدة جهات حكومية وحصل من خلالها على خبرة علمية وعملية وخدمة إداريه لاتقل عن 28 سنه.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
 
-              <TimelineItem>
-                  <TimelineContent sx={{ py: "12px", px: 2 }}>
-                      <Typography variant="h6" component="span">
-                          Junior Advocate
-                      </Typography>
-                      <Typography>Joined ABC Law Firm as a Junior Advocate.</Typography>
-                  </TimelineContent>
-                  <TimelineSeparator>
-                      <TimelineDot />
-                      <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineOppositeContent
-                      sx={{ m: "auto 0" }}
-                      align="right"
-                      variant="body2"
-                      color="text.secondary"
-                  >
-                      1995
-                  </TimelineOppositeContent>
-              </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            2009
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className="rtl" sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              تخرج من كلية الدراسات الإسلامية والعربية
+            </Typography>
+            <Typography>
+              تخرج من كلية الدراسات الإسلامية والعربيه في دبي ، بعد أن أكمل الدراسة الجامعية فيها.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
 
-              <TimelineItem>
-                  <TimelineContent sx={{ py: "12px", px: 2 }}>
-                      <Typography variant="h6" component="span">
-                          Founded Law Firm
-                      </Typography>
-                      <Typography>Founded my own Law Firm.</Typography>
-                  </TimelineContent>
-                  <TimelineSeparator>
-                      <TimelineDot />
-                      <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineOppositeContent
-                      sx={{ m: "auto 0" }}
-                      align="right"
-                      variant="body2"
-                      color="text.secondary"
-                  >
-                      2005
-                  </TimelineOppositeContent>
-              </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            2013
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className="rtl" sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              تخرج من كلية الإمام مالك للشريعة والقانون
+            </Typography>
+            <Typography>
+              تخرج من كليه الإمام مالك للشريعة والقانون في دبي ، وحصل على البكالوريوس في الشريعة والقانون، ثم أكمل الدراسات العليا فيها.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
 
-              <TimelineItem>
-                  <TimelineContent sx={{ py: "12px", px: 2 }}>
-                      <Typography variant="h6" component="span">
-                          Senior Advocate
-                      </Typography>
-                      <Typography>Became a Senior Advocate at ABC Law Firm.</Typography>
-                  </TimelineContent>
-                  <TimelineSeparator>
-                      <TimelineDot />
-                      <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineOppositeContent
-                      sx={{ m: "auto 0" }}
-                      align="right"
-                      variant="body2"
-                      color="text.secondary"
-                  >
-                      2010
-                  </TimelineOppositeContent>
-              </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            2014
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className="rtl" sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              العمل بالمحاماة
+            </Typography>
+            <Typography>
+              التحق للتدرب على أعمال المحاماة لدى أحد أهم مكاتب المحاماة في أبو ظبي ، ثم قيد في وزارة العدل ، جدول المحامين غير المشتغلين ، مع الاستمرار في السلك الوظفيي على النحو الآتي:
+              <ul className="rtl">
+                <li className="timeline-list-aaa">عمل لدى شرطة أبوظبي في إدارة مراكز الدعم الاجتماعي ، وشغل منصب مستشار قانوني واجتماعي وتناول من خلالها القضايا الوارده لديها ودراستها من الجانب القانوني والاجتماعي والتعامل مع ٣٠ نوع من القضايا والحالات المجتمعية والوقوف على اسبابها وإيجاد الحلول المناسبة لها بالاضافة لكونه محكما اسريا معتمدا.</li>
+                <li className="timeline-list-aaa">التحق في هيئة الرعاية الاسريه وحصل على صفة اختصاصي حماية الطفل معتمد ، وفق قانون حماية الطفل (قانون وديمة) وحصل على الرخصة المهنية في الرعاية الاجتماعية من دائرة تنمية المجتمع.</li>
+                <li className="timeline-list-aaa">عمل لدى بعض الجهات الحكومية ، مستشار في قضايا الإدمان و التعامل بشكل مباشر مع المدمنين لإعادة تأهيلهم ودمجهم في المجتمع.</li>
+                <li className="timeline-list-aaa">عمل ضمن فريق شبكة الخبراء في هيئة الطفولة المبكرة أبوظبي ، (خبير في الرعاية الوالدية وحماية الطفل).</li>
+                <li className="timeline-list-aaa">مدرب ومحاضر معتمد ، شارك في العديد من المؤتمرات والندوات وإعداد الدورات التدريبية في الجانب القانوني والرعاية الاجتماعية.</li>
+                <li className="timeline-list-aaa">حاز على العديد من الأوسمة والتكريمات وشهادات الشكر والثناء من قبل الجهات الحكومية. في مسيرته المهنية.</li>
+              </ul>
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
 
-              <TimelineItem>
-                  <TimelineContent sx={{ py: "12px", px: 2 }}>
-                      <Typography variant="h6" component="span">
-                          Legal Awards
-                      </Typography>
-                      <Typography>Received legal awards for outstanding performance.</Typography>
-                  </TimelineContent>
-                  <TimelineSeparator>
-                      <TimelineDot />
-                      <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineOppositeContent
-                      sx={{ m: "auto 0" }}
-                      align="right"
-                      variant="body2"
-                      color="text.secondary"
-                  >
-                      2015
-                  </TimelineOppositeContent>
-              </TimelineItem>
-
-          </Timeline>
-      </section>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            تأسيس مكتب المحاماة
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className="rtl" sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              تأسيس مكتب المحاماة
+            </Typography>
+            <Typography>
+              قام بتأسيس مكتب عبدالرحمن عبدالله الحربي للمحاماة والإستشارات القانونية المتخصص في قضايا الأحوال الشخصية ، والقضايا الجزائية ، والقضايا التجارية ، وأعمال وقضايا الشركات ، وجميع المجالات القانونية الأخرى.
+              <ul className="rtl">
+                <li className="timeline-list-aaa">حصل مكتب عبدالرحمن عبدالله الحربي للمحاماة والاستشارات القانونية على تصريح لموثق عقود معتمد من دائرة التنمية الاقتصادية في أبوظبي . وبموجب هذا التصريح ، يقوم بتوثيق عقود تأسيس الشركات وملاحقها وتوثيق محاضر الجمعيات العمومية.</li>
+              </ul>
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+      </Timeline>
+    </section>
   );
-}
+};
 
 
-
-function Services() {
+const Services = () => {
   return (
-    <section id="services">
+    <section id="services" className="rtl">
       <div className="common-container">
         <h1>خدماتنا</h1>
         <ul>
-          <p>
-            ١. القضايا المدنية بكافة أنواعها بما تشمله من تقديم المساعدة
+          <li>
+            القضايا المدنية بكافة أنواعها بما تشمله من تقديم المساعدة
             القانونية لحماية الحقوق والممتلكات العقارية لعملاء المكتب
-          </p>
-          <p>
-            ٢. القضايا التجارية بكافة أنواعها تشمله من منازعات اعمال البنوك
+          </li>
+          <li>
+            القضايا التجارية بكافة أنواعها تشمله من منازعات اعمال البنوك
             ومنازعات عقود المقاولات والمطالبات المالية الناتجة من توريد البضائع
-            والاعمال والخدمات{" "}
-          </p>
-          <p>
-            ٣. القضايا الجزائية بما تنطوي عليه من مرافعات جزائية امام مختلف
-            درجات المحاكم وتمثيل عملاء المكتب امام مراكز الشرطة والنيابات{" "}
-          </p>
-          <p>٤. تمثيل عملائنا في قضايا الأحوال الشخصية </p>
-          <p>٥. اعمال تأسيس الشركات </p>
-          <p>
-            ٦. توثيق عقود الشركات وتعديلاتها وملاحقها بما للمكتب من رجعية
-            التوثيق الصادرة من دائرة التنمية الاقتصادية في ابوظبي{" "}
-          </p>
-          <p>٧. تمثيل عملاء المكتب في قضايا التحكيم</p>
-          <p>٨. تنفيذ الاحكام وتحصيل الديون </p>
-          <p>
-            ٩. تقديم الاستشارات القانونية للأفراد والشركات وصياغة العقود
-            والاتفاقيات تنظيماً لتعاملاتهم المالية توقياً واتقاء للتقاضي وتهيئه
-            لشروط تقاضي محكمة على فرض وقوعه{" "}
-          </p>
-          <p>
-            ١٠. المنازعات العمالية بما تشمل من تقديم الاستشارات القانونية لأصحاب
-            العمل و الموظفين تطبيقاً لقانون العمل{" "}
-          </p>
-          <p>
-            ١١. متابعة القضايا خارج الدولة بالشراكة والتنسيق مع مكاتب المحاماة
-            الإقليم{" "}
-          </p>
-          <p>١٢. منازعات التامين على الحوادث والأخطار المؤمن عليها</p>
+            والاعمال والخدمات
+          </li>
+          <li>
+            القضايا الجزائية بما تنطوي عليه من مرافعات جزائية امام مختلف
+            درجات المحاكم وتمثيل عملاء المكتب امام مراكز الشرطة والنيابات
+          </li>
+          <li>تمثيل عملائنا في قضايا الأحوال الشخصية</li>
+          <li>اعمال تأسيس الشركات</li>
+          <li>
+            توثيق عقود الشركات وتعديلاتها وملاحقها بما للمكتب من رجعية
+            التوثيق الصادرة من دائرة التنمية الاقتصادية في ابوظبي
+          </li>
+          <li>تمثيل عملاء المكتب في قضايا التحكيم</li>
+          <li>تنفيذ الاحكام وتحصيل الديون</li>
+          <li>
+            تقديم الاستشارات القانونية للأفراد والشركات وصياغة العقود
+            والاتفاقيات تنظيماً لتعاملاتهم المالية وتوقياً لاتقاء اي تقاضي وتهيئه
+            لشروط تقاضي المحكمة على فرض وقوعه
+          </li>
+          <li>
+            المنازعات العمالية بما تشمل من تقديم الاستشارات القانونية لأصحاب
+            العمل و الموظفين تطبيقاً لقانون العمل
+          </li>
+          <li>
+            متابعة القضايا خارج الدولة بالشراكة والتنسيق مع مكاتب المحاماة
+            الإقليم
+          </li>
+          <li>منازعات التامين على الحوادث والأخطار المؤمن عليها</li>
         </ul>
       </div>
     </section>
   );
-}
+};
 
 function Contact() {
   return (
-    <section id="contactus">
+    <section id="contactus" className="rtl">
       <div className="contact-info">
         <h1>معلومات الاتصال</h1>
-        <p>البريد الإلكتروني: contact@lawfirm.com</p>
-        <p>الهاتف: +1-123-456-7890</p>
-        <p>العنوان: 123 شارع المكتب القانوني، المدينة، البلد</p>
+        <p>البريد الإلكتروني: a@alharbilawyer.ae</p>
+        <p>الهاتف: <span style={{ direction: "ltr", unicodeBidi: "embed" }}>+97126330061 / +971503141420</span></p>
+        <p>
+          العنوان: برج بنك أبوظبي الأول، الطابق الثامن، شارع الحصن، حديقة العائلة، أبوظبي، 6054، الإمارات العربية المتحدة
+        </p>
       </div>
     </section>
   );
 }
 
+
+
 function Footer() {
   return (
-    <footer>
-      <p>© 2023 اسم الشركة القانونية. كل الحقوق محفوظة.</p>
+    <footer className="rtl">
+      <p className="foot">© 2024 مكتب عبد الرحمن عبد الله الحربي للمحاماة. جميع الحقوق محفوظة.</p>
     </footer>
   );
 }
+
+
 
 export default ArabicApp;

@@ -71,6 +71,12 @@ li {
   color: white;
 }
 
+/* Ensure lists inside the timeline have correct color */
+.timeline-content ul,
+.timeline-content ul li {
+  color: #3a2e22;
+}
+
 /* Center the blocks or containers */
 section,
 footer {
@@ -78,10 +84,11 @@ footer {
   text-align: center;
 }
 
-header{
+header {
   padding: 2em;
 }
-.welcomeee{
+
+.welcomeee {
   text-align: center;
 }
 
@@ -90,7 +97,7 @@ footer {
   /* margin-top: 300px; */
 }
 
-.foot{
+.foot {
   color: white;
 }
 
@@ -101,6 +108,7 @@ header#home {
 header h1 {
   color: #b2925f;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -159,7 +167,6 @@ html {
   box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
 }
 
-
 .header-container {
   display: flex;
   align-items: center;
@@ -179,7 +186,7 @@ html {
   border: 5px solid #818385; /* Optional: Add a border for visual separation */
   margin-top: 50px;
   box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
-} 
+}
 
 /* Section styling */
 #journey {
@@ -195,7 +202,6 @@ html {
 }
 
 /* Horizontal Timeline Styling */
-
 .timeline {
   display: flex; /* Make it horizontal */
   align-items: center;
@@ -249,6 +255,12 @@ html {
   margin-bottom: 0.5em;
 }
 
+/* Ensure lists inside the timeline have correct color */
+.timeline-content ul,
+.timeline-content ul li {
+  color: #3a2e22;
+}
+
 /* Text styling for TimelineItem */
 #journey .MuiTypography-root {
   color: #3a2e22;
@@ -262,7 +274,3 @@ html {
 #journey .MuiTimelineConnector-root {
   background-color: #b2925f;
 }
-
-
-
-

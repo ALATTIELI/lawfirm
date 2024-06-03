@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "../App.css";
 import WhatsAppLink from "../WhatsApp/WhatsApp";
 import ImageSlider from "../ImageSlider";
@@ -30,7 +30,6 @@ function Navbar({ toggleLanguage }) {
     <nav>
       <div className="logo">
         <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
-        {/* <h2>Abdulrahman Abdullah AlHarbi Law and Legal Consultations</h2> */}
       </div>
       <ul>
         <li>
@@ -96,7 +95,7 @@ function Header() {
 function About() {
   return (
     <section id="journey">
-      <h1>Professional Journey</h1>
+      <h1>Professional career</h1>
       <Timeline position="alternate">
         <TimelineItem>
           <TimelineOppositeContent
@@ -105,7 +104,7 @@ function About() {
             variant="body2"
             color="text.secondary"
           >
-            1990
+            1994
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
@@ -113,9 +112,11 @@ function About() {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Law School
+              Started Professional Career
             </Typography>
-            <Typography>Started Law School at XYZ University.</Typography>
+            <Typography>
+              Started his professional career and joined several government entities, gaining scientific, practical, and administrative experience of no less than 28 years.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -126,7 +127,7 @@ function About() {
             variant="body2"
             color="text.secondary"
           >
-            1995
+            2009
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
@@ -134,9 +135,11 @@ function About() {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Junior Advocate
+              Graduated from College of Islamic and Arabic Studies
             </Typography>
-            <Typography>Joined ABC Law Firm as a Junior Advocate.</Typography>
+            <Typography>
+              Graduated from the College of Islamic and Arabic Studies in Dubai after completing his university studies there.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -147,7 +150,7 @@ function About() {
             variant="body2"
             color="text.secondary"
           >
-            2005
+            2013
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
@@ -155,9 +158,69 @@ function About() {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Founded Law Firm
+              Graduated from College of Imam Malik for Sharia and Law
             </Typography>
-            <Typography>Founded my own Law Firm.</Typography>
+            <Typography>
+              Graduated from the College of Imam Malik for Sharia and Law in Dubai, obtaining a bachelor's degree in Sharia and Law, and later completed his postgraduate studies there.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            2014
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Legal Practice
+            </Typography>
+            <Typography>
+              Joined one of the most important law firms in Abu Dhabi for training in legal practice, then registered with the Ministry of Justice in the roll of non-practicing lawyers, while continuing in the employment sector as follows:
+              <ul>
+                <li className="timeline-list-aaa">Worked at Abu Dhabi Police in the Department of Social Support Centers, serving as a Legal and Social Consultant, handling various cases, studying them from legal and social perspectives, dealing with 30 types of social cases, identifying their causes, and finding appropriate solutions, in addition to being a certified family arbitrator.</li>
+                <li className="timeline-list-aaa">Joined the Family Care Authority and obtained the status of certified Child Protection Specialist under the Child Protection Law (Wadeema Law), and obtained a professional license in social care from the Department of Community Development.</li>
+                <li className="timeline-list-aaa">Worked with some government entities as a consultant in addiction cases, dealing directly with addicts for their rehabilitation and reintegration into society.</li>
+                <li className="timeline-list-aaa">Part of the Expert Network team at the Early Childhood Authority in Abu Dhabi (Expert in Parental Care and Child Protection).</li>
+                <li className="timeline-list-aaa">Certified trainer and lecturer, participated in numerous conferences and seminars, and organized training courses in the legal and social care fields.</li>
+                <li className="timeline-list-aaa">Received numerous medals, honors, and certificates of appreciation and praise from government entities throughout his professional journey.</li>
+              </ul>
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="text.secondary"
+          >
+            Establishing a law office
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+            Establishing a law office
+            </Typography>
+            <Typography>
+  He established the Abdulrahman Abdullah AlHarbi Law and Legal Consultancy Office, which specializes in personal status cases, criminal cases, commercial cases, corporate matters, and all other legal fields.
+  <ul>
+    <li className="timeline-list-aaa">The Abdulrahman Abdullah AlHarbi Law and Legal Consultancy Office obtained a license as a certified contract notary from the Department of Economic Development in Abu Dhabi. Under this license, the office notarizes company incorporation contracts and their amendments, as well as documenting the minutes of general assemblies.</li>
+  </ul>
+</Typography>
+
           </TimelineContent>
         </TimelineItem>
       </Timeline>
@@ -171,45 +234,45 @@ function Services() {
       <div className="common-container">
         <h1>Our Services</h1>
         <ul>
-          <p>
-            1. Civil cases of all types, including providing legal assistance to
+          <li>
+            Civil cases of all types, including providing legal assistance to
             protect the rights and real estate properties of the office's
             clients.
-          </p>
-          <p>
-            2. Commercial cases of all types, including disputes involving
+          </li>
+          <li>
+            Commercial cases of all types, including disputes involving
             banking transactions, contract disputes, and financial claims
             arising from the supply of goods, works, and services.
-          </p>
-          <p>
-            3. Criminal cases, including criminal pleadings before various court
+          </li>
+          <li>
+            Criminal cases, including criminal pleadings before various court
             levels and representing office clients before police stations and
             public prosecutors.
-          </p>
-          <p>4. Representation of our clients in personal status cases.</p>
-          <p>5. Company establishment procedures.</p>
-          <p>
-            6. Notarizing company contracts and amendments, and their annexes,
+          </li>
+          <li>Representation of our clients in personal status cases.</li>
+          <li>Company establishment procedures.</li>
+          <li>
+            Notarizing company contracts and amendments, and their annexes,
             in accordance with the notarization jurisdiction issued by the
             Economic Development Department in Abu Dhabi.
-          </p>
-          <p>7. Representation of office clients in arbitration cases.</p>
-          <p>8. Execution of judgments and debt collection.</p>
-          <p>
-            9. Providing legal consultations to individuals and companies and
+          </li>
+          <li>Representation of office clients in arbitration cases.</li>
+          <li>Execution of judgments and debt collection.</li>
+          <li>
+            Providing legal consultations to individuals and companies and
             drafting contracts and agreements to regulate their financial
             transactions, as a preventive measure and to avoid litigation, and
             to prepare for court conditions if litigation becomes necessary.
-          </p>
-          <p>
-            10. Labor disputes, including providing legal consultations to
+          </li>
+          <li>
+            Labor disputes, including providing legal consultations to
             employers and employees in accordance with labor law.
-          </p>
-          <p>
-            11. Handling cases outside the country in partnership and
+          </li>
+          <li>
+            Handling cases outside the country in partnership and
             coordination with regional law firms.
-          </p>
-          <p>12. Insurance disputes related to accidents and insured risks.</p>
+          </li>
+          <li>Insurance disputes related to accidents and insured risks.</li>
         </ul>
       </div>
     </section>
@@ -219,24 +282,26 @@ function Services() {
 function Contact() {
   return (
     <section id="contactus">
-      {/* Contact Information */}
       <div className="contact-info">
         <h1>Contact Information</h1>
-        <p>Email: contact@lawfirm.com</p>
-        <p>Phone: +1-123-456-7890</p>
-        <p>Address: 123 Law Firm St., City, Country</p>
+        <p>Email: a@alharbilawyer.ae</p>
+        <p>Phone: +97126330061 / +971503141420</p>
+        <p>
+          Address: First Abu Dhabi Bank Tower, 8th Floor, Al Hosun Street, Family Garden, Abu Dhabi, 6054 United Arab Emirates
+        </p>
       </div>
-      {/* </div> */}
     </section>
   );
 }
 
+
 function Footer() {
   return (
     <footer>
-      <p className="foot">© 2023 Law Firm Name. All rights reserved.</p>
+      <p className="foot">© 2024 Abdulrahman Abdullah AlHarbi Law. All rights reserved.</p>
     </footer>
   );
 }
+
 
 export default EnglishApp;

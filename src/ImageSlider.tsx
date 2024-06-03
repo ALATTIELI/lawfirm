@@ -8,6 +8,8 @@ function ImageSlider({}) {
     "./src/assets/abudhabicourt.png",
     "./src/assets/economic.png",
     "./src/assets/municipality.jpg",
+    "./src/assets/moj.png",
+    "./src/assets/dubaicourt.jpg",
   ];
 
   useEffect(() => {

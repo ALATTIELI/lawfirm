@@ -10,12 +10,10 @@ nav li a {
   margin-left: 70px;
 }
 
-.ppp{
+.ppp {
   justify-content: flex-end;
   text-align: center;
 }
-
-
 
 .rtl .MuiTimelineItem-root {
   flex-direction: row-reverse; /* Reverse the direction for RTL */
@@ -35,4 +33,93 @@ nav li a {
   text-align: right; /* Align content text to the right */
 }
 
+/* Timeline Section Styling */
+#journey {
+  padding: 2em 0;
+  background-color: #f7f7f7;
+  text-align: center;
+  overflow-x: auto;
+}
 
+#journey h1 {
+  margin-bottom: 1em;
+  color: #3a2e22;
+}
+
+/* Horizontal Timeline Styling */
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow-x: auto;
+  gap: 2em;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.timeline-separator {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.timeline-connector {
+  width: 2em;
+  height: 2px;
+  background-color: #b2925f;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #b2925f;
+  border-radius: 50%;
+}
+
+.timeline-opposite-content {
+  flex: none;
+  white-space: nowrap;
+  padding-right: 1em;
+  color: #3a2e22;
+}
+
+.timeline-content {
+  padding: 1em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #3a2e22;
+}
+
+.timeline-content h6 {
+  color: #3a2e22;
+  margin-bottom: 0.5em;
+}
+
+/* Ensure lists inside the timeline have correct color */
+.timeline-content ul,
+.timeline-content ul li {
+  color: #3a2e22;
+}
+
+.timeline-list-aaa {
+  color: #3a2e22;
+}
+
+/* Text styling for TimelineItem */
+#journey .MuiTypography-root {
+  color: #3a2e22;
+}
+
+/* Styling for dots and line */
+#journey .MuiTimelineDot-root {
+  background-color: #b2925f;
+}
+
+#journey .MuiTimelineConnector-root {
+  background-color: #b2925f;
+}
