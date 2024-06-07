@@ -11,6 +11,9 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const ArabicApp = ({ toggleLanguage }) => {
   return (
@@ -267,7 +270,7 @@ const Services = () => {
           </li>
           <li>
             متابعة القضايا خارج الدولة بالشراكة والتنسيق مع مكاتب المحاماة
-            الإقليم
+            الإقليمية
           </li>
           <li>منازعات التامين على الحوادث والأخطار المؤمن عليها</li>
         </ul>
@@ -281,10 +284,22 @@ function Contact() {
     <section id="contactus" className="rtl">
       <div className="contact-info">
         <h1>معلومات الاتصال</h1>
-        <p>البريد الإلكتروني: a@alharbilawyer.ae</p>
-        <p>الهاتف: <span style={{ direction: "ltr", unicodeBidi: "embed" }}>+97126330061 / +971503141420</span></p>
         <p>
-          العنوان: برج بنك أبوظبي الأول، الطابق الثامن، شارع الحصن، حديقة العائلة، أبوظبي، 6054، الإمارات العربية المتحدة
+          <EmailIcon /> البريد الإلكتروني: a@alharbilawyer.ae
+        </p>
+        <p>
+          <PhoneIcon className="phone-icon" /> الهاتف: <span style={{ direction: "ltr", unicodeBidi: "embed" }}>+97126330061 / +971503141420</span>
+        </p>
+        <p>
+          <LocationOnIcon />
+          <a
+            href="https://www.google.com/maps/place/First+Abu+Dhabi+Bank+Tower,+8th+Floor,+Al+Hosun+Street,+Family+Garden,+Abu+Dhabi,+6054+United+Arab+Emirates"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            العنوان: برج بنك أبوظبي الأول - الطابق الثامن - شارع الحصن - حديقة العائلة - أبوظبي، الإمارات العربية المتحدة، ص.ب: 6054
+          </a>
         </p>
       </div>
     </section>

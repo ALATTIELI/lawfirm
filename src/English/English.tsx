@@ -10,6 +10,9 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 function EnglishApp({ toggleLanguage }) {
   return (
@@ -284,10 +287,22 @@ function Contact() {
     <section id="contactus">
       <div className="contact-info">
         <h1>Contact Information</h1>
-        <p>Email: a@alharbilawyer.ae</p>
-        <p>Phone: +97126330061 / +971503141420</p>
         <p>
-          Address: First Abu Dhabi Bank Tower, 8th Floor, Al Hosun Street, Family Garden, Abu Dhabi, 6054 United Arab Emirates
+          <EmailIcon /> Email: a@alharbilawyer.ae
+        </p>
+        <p>
+          <PhoneIcon /> Phone: +97126330061 / +971503141420
+        </p>
+        <p>
+          <LocationOnIcon />
+          <a
+            href="https://www.google.com/maps/place/First+Abu+Dhabi+Bank+Tower,+8th+Floor,+Al+Hosun+Street,+Family+Garden,+Abu+Dhabi,+6054+United+Arab+Emirates"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            Address: First Abu Dhabi Bank Tower, 8th Floor, Al Hosun Street, Family Garden, Abu Dhabi, United Arab Emirates, P.O. Box: 6054
+          </a>
         </p>
       </div>
     </section>

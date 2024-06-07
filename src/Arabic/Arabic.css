@@ -123,3 +123,33 @@ nav li a {
 #journey .MuiTimelineConnector-root {
   background-color: #b2925f;
 }
+
+.contact-info {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align text */
+}
+
+.contact-info h1 {
+  color: white;
+  margin-bottom: 1em;
+}
+
+.contact-info p {
+  display: flex;
+  justify-content: center; /* Center the flex items */
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  margin: 0.5em 0; /* Add some margin between lines */
+}
+
+.contact-info p svg {
+  margin-left: 10px;
+  color: #b2925f;
+}
+.phone-icon {
+  transform: rotate(260deg); /* Rotate the phone icon */
+}
