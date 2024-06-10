@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ImageSlider.css"; // Import the CSS file for styling
 
-function ImageSlider({}) {
+function ImageSlider() {
   const [currentImage, setCurrentImage] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const images = [
     "./src/assets/abudhabicourt.png",
     "./src/assets/economic.png",
     "./src/assets/moj.png",
-    "./src/assets/dubaicourt.jpg",
+    "./src/assets/dubaicourt.png",
   ];
 
   useEffect(() => {
@@ -21,16 +22,16 @@ function ImageSlider({}) {
     };
   }, [images]);
 
-  const nextSlide = () => {
-    setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-  };
+  // const nextSlide = () => {
+  //   setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+  // };
 
-  const prevSlide = () => {
-    setCurrentImage((prevImage) => (prevImage - 1 + images.length) % images.length);
-  };
+  // const prevSlide = () => {
+  //   setCurrentImage((prevImage) => (prevImage - 1 + images.length) % images.length);
+  // };
 
   return (
-    <div className="imageslider">
+    <div className="imageslider" ref={containerRef}>
       <div className="slider-container">
         <img
           src={images[currentImage]}
@@ -38,12 +39,6 @@ function ImageSlider({}) {
           className="slider-image"
         />
       </div>
-      <button className="prev-button" onClick={prevSlide}>
-        &#9664; {/* Left arrow symbol */}
-      </button>
-      <button className="next-button" onClick={nextSlide}>
-        &#9654; {/* Right arrow symbol */}
-      </button>
     </div>
   );
 }

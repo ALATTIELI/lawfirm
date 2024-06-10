@@ -3,6 +3,10 @@
 .imageslider {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-container {
@@ -10,18 +14,18 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
+  max-width: 600px; /* Set a maximum width for the slider */
+  height: auto; /* Set height to auto to maintain aspect ratio */
   transition: transform 0.5s ease;
 }
 
 .slider-image {
-  width: 600px; /* Set a fixed width for the images */
-  height: 200px; /* Set a fixed height for the images */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure the entire image is visible */
 }
 
-.prev-button,
+/* .prev-button,
 .next-button {
   position: absolute;
   top: 50%;
@@ -38,10 +42,20 @@
 
 .next-button {
   right: 10px;
+} */
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  .slider-container {
+    max-width: 100%;
+    height: auto; /* Ensure the height adjusts based on the aspect ratio */
+  }
 }
 
-/* Divider style */
-.divider {
-  border-top: 1px solid #ccc; /* Adjust the border style as needed */
-  margin-top: 20px; /* Adjust the margin as needed to control the spacing */
+@media (max-width: 480px) {
+  .slider-container {
+    max-width: 100%;
+    height: auto; /* Ensure the height adjusts based on the aspect ratio */
+  }
 }

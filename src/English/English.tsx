@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import WhatsAppLink from "../WhatsApp/WhatsApp";
 import ImageSlider from "../ImageSlider";
@@ -29,12 +29,23 @@ function EnglishApp({ toggleLanguage }) {
 }
 
 function Navbar({ toggleLanguage }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav>
       <div className="logo">
         <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
       </div>
-      <ul>
+      <div className="hamburger" onClick={handleToggle}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul className={isOpen ? "show" : ""}>
         <li>
           <a href="#home">Home</a>
         </li>
@@ -72,6 +83,7 @@ function Header() {
             Abdul Rahman Abdullah Al-Harbi's Office
             <br /> for Legal Advocacy and Consultations
           </h1>
+          <div className="intro">
           <p>
             On behalf of myself and our team at the office:
             <br />
@@ -89,6 +101,7 @@ function Header() {
             integrity in performance, precision in follow-up, and exerting
             maximum effort and care.
           </p>
+          </div>
         </div>
       </div>
     </header>
@@ -138,10 +151,10 @@ function About() {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Graduated from College of Islamic and Arabic Studies
+              Graduated from College of Islamic and Arabic Studies Dubai
             </Typography>
             <Typography>
-              Graduated from the College of Islamic and Arabic Studies in Dubai after completing his university studies there.
+               After completing his university studies there.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -161,10 +174,10 @@ function About() {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Graduated from College of Imam Malik for Sharia and Law
+              Graduated from College of Imam Malik for Sharia and Law Dubai
             </Typography>
             <Typography>
-              Graduated from the College of Imam Malik for Sharia and Law in Dubai, obtaining a bachelor's degree in Sharia and Law, and later completed his postgraduate studies there.
+              Obtaining a bachelor's degree in Sharia and Law, and later completed his postgraduate studies there.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -296,7 +309,7 @@ function Contact() {
         <p>
           <LocationOnIcon />
           <a
-            href="https://www.google.com/maps/place/First+Abu+Dhabi+Bank+Tower,+8th+Floor,+Al+Hosun+Street,+Family+Garden,+Abu+Dhabi,+6054+United+Arab+Emirates"
+            href="https://maps.google.com/?q=24.478447,54.351387"
             target="_blank"
             rel="noopener noreferrer"
             style={{ textDecoration: 'none', color: 'inherit' }}

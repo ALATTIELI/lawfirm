@@ -153,3 +153,16 @@ nav li a {
 .phone-icon {
   transform: rotate(260deg); /* Rotate the phone icon */
 }
+/* App.css */
+
+/* Styling for Arabic text */
+.introarabic {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px; /* Adjust the max width as needed */
+  line-height: 1.6; /* Adjust line height for readability */
+  color: white; /* Assuming the background is dark */
+  font-size: large; /* Adjust font size as needed */
+  direction: rtl; /* Right to left for Arabic text */
+}

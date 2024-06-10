@@ -74,7 +74,7 @@ const Header = () => {
             مرحباً بكم في مكتب عبد الرحمن عبد الله الحربي <br /> للمحاماة
             والاستشارات القانونية
           </h1>
-          <div className="ppp">
+          <div className="introarabic">
             <p>
               باسمي وباسم فريق العمل في مكتبنا :<br />
               " عبد الرحمن عبد الله الحربي للمحاماة والاستشارات القانونية "
@@ -139,10 +139,10 @@ const About = () => {
           </TimelineSeparator>
           <TimelineContent className="rtl" sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              تخرج من كلية الدراسات الإسلامية والعربية
+            تخرج من كلية الدراسات الإسلامية والعربية دبي
             </Typography>
             <Typography>
-              تخرج من كلية الدراسات الإسلامية والعربيه في دبي ، بعد أن أكمل الدراسة الجامعية فيها.
+               بعد أن أكمل الدراسة الجامعية فيها.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -162,10 +162,10 @@ const About = () => {
           </TimelineSeparator>
           <TimelineContent className="rtl" sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              تخرج من كلية الإمام مالك للشريعة والقانون
+             تخرج من كلية الإمام مالك للشريعة والقانون دبي
             </Typography>
             <Typography>
-              تخرج من كليه الإمام مالك للشريعة والقانون في دبي ، وحصل على البكالوريوس في الشريعة والقانون، ثم أكمل الدراسات العليا فيها.
+              وحصل على البكالوريوس في الشريعة والقانون، ثم أكمل الدراسات العليا فيها.
             </Typography>
           </TimelineContent>
         </TimelineItem>
@@ -293,7 +293,7 @@ function Contact() {
         <p>
           <LocationOnIcon />
           <a
-            href="https://www.google.com/maps/place/First+Abu+Dhabi+Bank+Tower,+8th+Floor,+Al+Hosun+Street,+Family+Garden,+Abu+Dhabi,+6054+United+Arab+Emirates"
+            href="https://maps.google.com/?q=24.478447,54.351387"
             target="_blank"
             rel="noopener noreferrer"
             style={{ textDecoration: 'none', color: 'inherit' }}
