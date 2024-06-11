@@ -1,70 +1,54 @@
-import React, { useState } from "react";
-import "../App.css";
-import WhatsAppLink from "../WhatsApp/WhatsApp";
-import ImageSlider from "../ImageSlider";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import Typography from "@mui/material/Typography";
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import LanguageIcon from '@mui/icons-material/Language';
+import WhatsAppLink from '../WhatsApp/WhatsApp';
+import ImageSlider from '../ImageSlider';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import Typography from '@mui/material/Typography';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import '../App.css';
 
 function EnglishApp({ toggleLanguage }) {
   return (
     <div className="App">
       <Navbar toggleLanguage={toggleLanguage} />
-      <Header />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
-      <WhatsAppLink />
+      <div className="main-content">
+        <Header />
+        <About />
+        <Services />
+        <Contact />
+        <Footer />
+        <WhatsAppLink />
+      </div>
     </div>
   );
 }
 
 function Navbar({ toggleLanguage }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <nav>
-      <div className="logo">
-        <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
-      </div>
-      <div className="hamburger" onClick={handleToggle}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul className={isOpen ? "show" : ""}>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#contactus">Contact Us</a>
-        </li>
-        <li>
-          <button onClick={toggleLanguage}>العربية</button>
-        </li>
-      </ul>
-    </nav>
+    <AppBar position="fixed" sx={{ backgroundColor: '#b2925f', boxShadow: '5px 5px 20px #b2925f' }}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <div className="logo">
+          <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
+        </div>
+        <IconButton className="language-button" onClick={toggleLanguage} sx={{ fontSize: '4rem' }}>
+          <LanguageIcon fontSize="inherit" />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 }
+
 
 function Header() {
   return (

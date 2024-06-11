@@ -17,47 +17,8 @@ nav {
   justify-content: space-between;
   padding: 1em 2em;
   background-color: #b2925f;
-  color: #b2925f;
   align-items: center;
   box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav li:last-child {
-  margin-right: 0; /* Remove margin for the last item to avoid extra spacing */
-}
-
-nav li a {
-  color: #b2925f;
-  text-decoration: none;
-  padding: 10px 20px; /* Added padding for larger clickable area and better appearance */
-  border-radius: 5px; /* Optional: Adds rounded corners */
-  transition: background-color 0.3s; /* Optional: Smooth transition effect */
-}
-
-nav li a:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Slight highlight on hover */
-}
-
-nav li a:visited {
-  color: white;
-}
-
-nav h3 {
-  flex: 0 0 auto;
-  margin-right: 1em;
-  color: #b2925f;
 }
 
 .logo {
@@ -66,84 +27,38 @@ nav h3 {
 }
 
 .logo img {
-  height: 90px;
-  width: 400px; /* Adjust the width as needed */
+  height: 150px;
+  width: 500px;
   margin-right: 20px; /* Add spacing between the logo and text */
 }
 
-/* Dropdown Menu */
-.dropdown {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-}
-
-.dropdown li {
-  width: 100%;
-  text-align: center;
-  margin: 0.5em 0;
-}
-
-.dropdown a {
-  display: block;
-  width: 100%;
-}
-
-/* Hamburger Icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #b2925f;
-  margin: 4px;
-  transition: 0.4s;
-}
-
-/* Responsive styling */
-@media (max-width: 250px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo {
-    margin-bottom: 1em;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav li a {
-    display: block;
-    width: 100%;
-  }
+.language-button {
+  color: #b2925f;
 }
 
 @media (max-width: 480px) {
   .logo img {
     height: 70px;
     width: auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .language-button {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 481px) {
+  nav {
+    flex-direction: row;
+  }
+
+  .language-button {
+    margin-top: 0;
   }
 }
 
@@ -152,15 +67,26 @@ p,
 h2,
 h3,
 li {
-  /* text-justify: inter-word; */
   color: white;
+}
+
+/* Increase font size and line height for better readability */
+p,
+li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Ensure the content below the navbar starts after the navbar */
+.main-content {
+  margin-top: 120px; /* Adjust based on the height of your navbar */
 }
 
 .intro {
   text-align: center;
-  font-size: large;
-
+  font-size: 1.2rem;
 }
+
 /* Ensure lists inside the timeline have correct color */
 .timeline-content ul,
 .timeline-content ul li {
@@ -178,7 +104,6 @@ header {
   padding: 2em;
 }
 
-/* Add padding to the header to create a gap between navbar and header content */
 header#home {
   padding-top: 120px; /* Adjust the value as needed for the desired gap */
 }
@@ -201,19 +126,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 90px;
-  width: 400px; /* Adjust the width as needed */
-  margin-right: 20px; /* Add spacing between the logo and text */
-}
-
 .common-container {
-  font-size: large;
+  font-size: 1.2rem;
   display: inline-block; /* Make the container inline-block */
   text-align: center; /* Reset text alignment inside the container to left */
   padding: 20px; /* Add padding for spacing */
@@ -384,7 +298,6 @@ html {
   background-color: #b2925f;
 }
 
-
 .contact-info {
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -402,7 +315,8 @@ html {
   display: flex;
   justify-content: center; /* Center the flex items */
   align-items: center;
-  font-size: 16px;
+  font-size: 1.2rem; /* Increase font size */
+  line-height: 1.6; /* Adjust line height for readability */
   color: white;
   margin: 0.5em 0; /* Add some margin between lines */
 }

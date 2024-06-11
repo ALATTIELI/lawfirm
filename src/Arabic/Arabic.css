@@ -1,13 +1,72 @@
+/* Arabic.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #3a2e22;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #b2925f;
+  align-items: center;
+  box-shadow: 5px 5px 20px #b2925f; /* Optional: Add a box shadow for a card-like appearance */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 150px;
+  width: 500px;
+  margin-right: 20px; /* Add spacing between the logo and text */
+}
+
+.language-button {
+  color: #b2925f;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 70px;
+    width: auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .language-button {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 481px) {
+  nav {
+    flex-direction: row;
+  }
+
+  .language-button {
+    margin-top: 0;
+  }
+}
+
 .rtl {
   direction: rtl;
 }
 
 nav li a {
   padding: 10px;
-}
-
-.language-button {
-  margin-left: 70px;
 }
 
 .ppp {
@@ -141,7 +200,8 @@ nav li a {
   display: flex;
   justify-content: center; /* Center the flex items */
   align-items: center;
-  font-size: 16px;
+  font-size: 1.2rem; /* Increase font size */
+  line-height: 1.6; /* Adjust line height for readability */
   color: white;
   margin: 0.5em 0; /* Add some margin between lines */
 }
@@ -150,10 +210,10 @@ nav li a {
   margin-left: 10px;
   color: #b2925f;
 }
+
 .phone-icon {
   transform: rotate(260deg); /* Rotate the phone icon */
 }
-/* App.css */
 
 /* Styling for Arabic text */
 .introarabic {
@@ -163,6 +223,51 @@ nav li a {
   max-width: 800px; /* Adjust the max width as needed */
   line-height: 1.6; /* Adjust line height for readability */
   color: white; /* Assuming the background is dark */
-  font-size: large; /* Adjust font size as needed */
+  font-size: 1.2rem; /* Increase font size */
   direction: rtl; /* Right to left for Arabic text */
+}
+
+/* Header container styling */
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for responsive design */
+  justify-content: center; /* Center align for smaller screens */
+  margin-top: 20px; /* Add margin to create a gap between image slider and Abdul Rahman image */
+}
+
+.header-container img.abdulrahman {
+  max-width: 100%; /* Ensure the image does not exceed the container's width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add some margin for spacing */
+  box-shadow: 5px 5px 20px #b2925f; /* Add a box shadow for a card-like appearance */
+}
+
+.header-container .header-text {
+  flex: 1; /* Allow text to take up remaining space */
+  text-align: center; /* Center text for better readability */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row; /* Horizontal layout for larger screens */
+    text-align: left; /* Left-align text */
+  }
+
+  .header-container .header-text {
+    text-align: right; /* Align text to the right */
+    padding-left: 20px;
+  }
+
+  .header-container img.abdulrahman {
+    margin: 0 20px 0 0; /* Add margin only to the right */
+    width: 450px;
+    height: 500px;
+  }
 }

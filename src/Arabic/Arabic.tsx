@@ -1,60 +1,52 @@
-import React from "react";
-import "../App.css";
-import "./Arabic.css";
-import WhatsAppLink from "../WhatsApp/WhatsApp";
-import ImageSlider from "../ImageSlider";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import Typography from "@mui/material/Typography";
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import LanguageIcon from '@mui/icons-material/Language';
+import WhatsAppLink from '../WhatsApp/WhatsApp';
+import ImageSlider from '../ImageSlider';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import Typography from '@mui/material/Typography';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import '../App.css';
+import './Arabic.css';
 
 const ArabicApp = ({ toggleLanguage }) => {
   return (
     <div className="App">
       <Navbar toggleLanguage={toggleLanguage} />
-      <Header />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
-      <WhatsAppLink />
+      <div className="main-content">
+        <Header />
+        <About />
+        <Services />
+        <Contact />
+        <Footer />
+        <WhatsAppLink />
+      </div>
     </div>
   );
 };
 
 const Navbar = ({ toggleLanguage }) => {
   return (
-    <nav>
-      <div className="logo">
-        <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
-      </div>
-      <ul>
-        <li>
-          <a href="#home">الصفحة الرئيسية</a>
-        </li>
-        <li>
-          <a href="#about">من نحن</a>
-        </li>
-        <li>
-          <a href="#services">خدماتنا</a>
-        </li>
-        <li>
-          <a href="#contactus">اتصل بنا</a>
-        </li>
-        <li>
-          <button onClick={toggleLanguage} className="language-button">
-            English
-          </button>
-        </li>
-      </ul>
-    </nav>
+    <AppBar position="fixed" sx={{ backgroundColor: '#b2925f', boxShadow: '5px 5px 20px #b2925f' }}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <div className="logo">
+          <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
+        </div>
+        <IconButton className="language-button" onClick={toggleLanguage} sx={{ fontSize: '4rem' }}>
+          <LanguageIcon fontSize="inherit" />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 };
 
@@ -71,7 +63,7 @@ const Header = () => {
         />
         <div className="header-text">
           <h1 className="welcomeee">
-            مرحباً بكم في مكتب عبد الرحمن عبد الله الحربي <br /> للمحاماة
+            :مرحباً بكم في مكتب<br /> عبد الرحمن عبد الله الحربي <br /> للمحاماة
             والاستشارات القانونية
           </h1>
           <div className="introarabic">

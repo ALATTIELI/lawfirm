@@ -13,7 +13,7 @@ function WhatsAppLink() {
 
   return (
     <div className="whatsapp-link" onClick={handleWhatsAppClick}>
-      <WhatsAppIcon style={{ fontSize: 50 }} /> {/* Adjust the fontSize value to make the icon bigger */}
+      <WhatsAppIcon style={{ fontSize: 100 }} /> {/* Adjust the fontSize value to make the icon bigger */}
     </div>
   );
 }
