@@ -6,10 +6,10 @@ function ImageSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const images = [
-    "./src/assets/abudhabicourt.png",
-    "./src/assets/economic.png",
-    "./src/assets/moj.png",
-    "./src/assets/dubaicourt.png",
+    "./abudhabicourt.png",
+    "./economic.png",
+    "./moj.png",
+    "./dubaicourt.png",
   ];
 
   useEffect(() => {

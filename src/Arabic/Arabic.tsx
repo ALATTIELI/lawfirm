@@ -40,7 +40,7 @@ const Navbar = ({ toggleLanguage }) => {
     <AppBar position="fixed" sx={{ backgroundColor: '#b2925f', boxShadow: '5px 5px 20px #b2925f' }}>
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <div className="logo">
-          <img src="./src/assets/logo1.jpg" alt="Law Firm Logo" />
+          <img src="/logo1.jpg" alt="Law Firm Logo" />
         </div>
         <IconButton className="language-button" onClick={toggleLanguage} sx={{ fontSize: '4rem' }}>
           <LanguageIcon fontSize="inherit" />
@@ -58,7 +58,7 @@ const Header = () => {
       <div className="header-container">
         <img
           className="abdulrahman"
-          src="./src/assets/abdulrahman.jpeg"
+          src="./abdulrahman.jpeg"
           alt="abdulrahman"
         />
         <div className="header-text">
