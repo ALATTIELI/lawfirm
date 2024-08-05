@@ -52,7 +52,6 @@ function Navbar({ toggleLanguage }) {
 function Header() {
   return (
     <header id="home">
-      <ImageSlider />
       <div className="divider"></div>
       <div className="header-container">
         <img
@@ -281,6 +280,7 @@ function Services() {
 function Contact() {
   return (
     <section id="contactus">
+      <ImageSlider />
       <div className="contact-info">
         <h1>Contact Information</h1>
         <p>

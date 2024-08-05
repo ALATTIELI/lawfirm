@@ -53,7 +53,6 @@ const Navbar = ({ toggleLanguage }) => {
 const Header = () => {
   return (
     <header id="home">
-      <ImageSlider />
       <div className="divider"></div>
       <div className="header-container">
         <img
@@ -274,6 +273,7 @@ const Services = () => {
 function Contact() {
   return (
     <section id="contactus" className="rtl">
+            <ImageSlider />
       <div className="contact-info">
         <h1>معلومات الاتصال</h1>
         <p>
