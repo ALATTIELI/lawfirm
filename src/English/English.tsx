@@ -56,7 +56,7 @@ function Header() {
       <div className="header-container">
         <img
           className="abdulrahman"
-          src="/abdulrahman.jpeg"
+          src="/abdulrahman.jpg"
           alt="abdulrahman"
         />
         <div className="header-text">
